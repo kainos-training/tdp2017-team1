@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataServiceService} from "../data-service.service";
+import {Course} from "../course";
 
 @Component({
   selector: 'map-book-course',
@@ -7,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookCourseComponent implements OnInit {
 
-  constructor() { }
+  data: DataServiceService;
+  course: Course;
+
+  constructor(data: DataServiceService) {
+    this.data = data;
+    this.course = this.data.testCourse;
+  }
 
   ngOnInit() {
   }
 
   bookCourse(){
-    console.log("button clicked");
+    console.log("Button clicked on course with:" , this.course.description);
   }
 }
