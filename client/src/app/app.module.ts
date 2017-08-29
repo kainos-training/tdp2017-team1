@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {AlertModule} from "ngx-bootstrap";
+import { BookCourseComponent } from './book-course/book-course.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookCourseComponent
   ],
   imports: [
     BrowserModule,
