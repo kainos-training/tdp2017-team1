@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {AlertModule} from "ngx-bootstrap";
 import { BookCourseComponent } from './book-course/book-course.component';
+import {DataServiceService} from "./data-service.service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { BookCourseComponent } from './book-course/book-course.component';
     BrowserModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
