@@ -18,7 +18,7 @@ const app = express();
  */
 // app.use is Binding application-level middleware to an instance of the app object
 app.use(cors());
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 
 // HTTP request logger middleware.
 app.use(morgan('dev'));
@@ -42,7 +42,7 @@ app.post('/book', function(req, res){
 });
 
 app.get('/getCourses', function(req, res) {
-  db.getCourses(function(rows) {
+    db.getCourses(function(rows) {
     res.send(rows);
   });
 });
