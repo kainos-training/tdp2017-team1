@@ -4,13 +4,16 @@
   "description": "Simple express api for the TDP MEAN seed project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "Síona Murray",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "errorhandler": "^1.5.0",
     "express": "^4.15.4",
+    "morgan": "^1.8.2",
     "mysql": "^2.14.1"
   }
 }

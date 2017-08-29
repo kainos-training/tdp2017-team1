@@ -1,0 +1,8 @@
+<div>
+    <h2>Available courses:</h2>
+
+    <ul class="courseList">
+
+        <li *ngFor="let course of db.courses|async">{{course.title}}</li>
+    </ul>
+</div>
