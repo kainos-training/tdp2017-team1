@@ -43,7 +43,7 @@ export class BookCourseComponent implements OnInit {
         };
 
         this.http.post("api/book", body, options).subscribe(data => {
-            console.log("Booking request has been sent for ", name , " using " , email , ".");
+            alert("Booking request has been sent for " + name + " using " + email + ".");
         });
     }
 }
