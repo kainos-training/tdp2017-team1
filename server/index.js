@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-const express = require ('express');
+const express = require('express');
 const errorHandler = require('errorhandler');
 const bodyParser = require('body-parser')
 const cors = require('cors');
@@ -31,6 +31,18 @@ app.use(errorHandler());
 /**
  * Routes configuration.
  */
+app.post('/book', function(req, res) {
+  const attendee_name = req.body.name;
+  const attendee_email = req.body.email;
+  const course_id = req.body.course_id;
+
+  if (course_id && attendee_email && attendee_name) {
+    db.bookCourse(attendee_name, attendee_email, course_id, function(message) {
+      res.send(message);
+    });
+  }
+});
+
 app.get('/getCourses', function(req, res) {
   db.getCourses(function(rows) {
     res.send(rows);
