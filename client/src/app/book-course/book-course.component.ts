@@ -12,4 +12,7 @@ export class BookCourseComponent implements OnInit {
   ngOnInit() {
   }
 
+  bookCourse(){
+    console.log("button clicked");
+  }
 }
