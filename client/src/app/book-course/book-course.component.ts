@@ -22,5 +22,14 @@ export class BookCourseComponent implements OnInit {
 
   bookCourse(){
     console.log("Button clicked on course with:" , this.course.description);
+
+    var name = prompt("Please enter your name here:");
+    console.log("Name:", name);
+
+    var email = prompt("Please enter your email here:");
+    console.log("Email:", email);
+
+
+
   }
 }

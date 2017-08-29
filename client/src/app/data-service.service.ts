@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Course} from "./course";
 
 @Injectable()
 export class DataServiceService {
