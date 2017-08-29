@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SeeAllCoursesComponent } from './see-all-courses/see-all-courses.component';
+import { DataServiceService } from './data-service.service';
+import { AlertModule } from "ngx-bootstrap";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import { SeeAllCoursesComponent } from './see-all-courses/see-all-courses.compon
     SeeAllCoursesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AlertModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

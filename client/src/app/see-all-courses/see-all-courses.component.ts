@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'map-see-all-courses',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeeAllCoursesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DataServiceService) { }
 
   ngOnInit() {
   }
