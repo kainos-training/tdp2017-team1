@@ -10,7 +10,7 @@ export class DataServiceService {
 
   testArray = [1, 2, 3, 4, 5];
 
-  // courses = this.http.get<Course[]>('/api/<URL>');
+  courses = this.http.get<Course[]>('/api/getCourses');
 
   testCourse = [{
       course_id: 1,
