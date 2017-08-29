@@ -46,3 +46,8 @@ Thumbs.db
 /server/node_modules/
 /server/config.json
 
+# client directory
+
+/client/node_modules/
+
+
