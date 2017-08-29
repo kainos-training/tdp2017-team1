@@ -1,9 +1,9 @@
 export class Course {
     course_id: number;
-    title: String;
+    title: string;
     start_date: Date;
-    location: String;
-    description: String;
-    additional_info: String;
+    location: string;
+    description: string;
+    additional_info: string;
     max_attendees: number;
 }

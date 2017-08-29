@@ -12,4 +12,23 @@ export class DataServiceService {
 
   // courses = this.http.get<Course[]>('/api/<URL>');
 
+  testCourse = [{
+      course_id: 1,
+      title: "Test name",
+      start_date: new Date("August 29, 2017 14:08:00"),
+      location: "Belfast",
+      description: "Default description",
+      additional_info: "Additional info",
+      max_attendees: 20
+    },
+    {
+      course_id: 2,
+      title: "Test name 2",
+      start_date: new Date("August 29, 2017 14:08:00"),
+      location: "London",
+      description: "Default description",
+      additional_info: "Additional info",
+      max_attendees: 20
+    }];
+
 }
