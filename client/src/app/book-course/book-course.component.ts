@@ -15,7 +15,6 @@ export class BookCourseComponent implements OnInit {
 
   constructor(data: DataServiceService, private http: HttpClient) {
     this.data = data;
-    this.course = this.data.testCourse;
   }
 
   ngOnInit() {
