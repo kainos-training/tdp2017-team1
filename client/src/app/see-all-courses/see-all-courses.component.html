@@ -9,7 +9,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let course of db.courses|async">
-      <th scope="row">{{course.title}}</th>
+      <th scope="row"><a href="/details?course_id={{course.course_id}}">{{course.title}}</a></th>
       <td>{{course.location}}</td>
       <td>{{course.start_date | date:'dd MMMM yyyy'}}</td>
         <td><map-book-course [course]="course"></map-book-course></td>
