@@ -1,12 +1,24 @@
 <!--<header>
     <img src="assets/kainos.jpg">
 </header>-->
+
+<ul class="nav navbar-nav">
+    <li>
+        <a routerLink="index">Index</a>
+    </li>
+    <li>
+        <a routerLink="details">Details</a>
+    </li>
+</ul>
+
+
+
 <div class="container">
     <div class="row header">
-        <img src="assets/mapLogo.png">  
+        <img src="assets/mapLogo.png">
     </div>
     <div class="row">
-        <map-see-all-courses></map-see-all-courses>
+        <router-outlet></router-outlet>
     </div>
 </div>
 

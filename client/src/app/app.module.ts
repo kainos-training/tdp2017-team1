@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {DataServiceService} from "./data-service.service";
 import {FormsModule} from "@angular/forms";
 import { DetailsPageComponent } from './details-page/details-page.component';
+import { routes } from './app.router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DetailsPageComponent } from './details-page/details-page.component';
     BrowserModule,
     AlertModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    routes
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]
