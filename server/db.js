@@ -35,7 +35,6 @@ exports.getCourseByID = function(course_id, callback){
 };
 
 exports.bookCourse = function (attendee_name, attendee_email, course_id, callback){
-  console.log("gere");
   db.query(
     "INSERT INTO `attendees` (`attendee_name`, `attendee_email`, `course_id`) "
     + "VALUES (?,?,?)",
