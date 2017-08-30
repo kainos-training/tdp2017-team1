@@ -28,25 +28,23 @@ app.use(errorHandler());
 /**
  * Routes configuration.
  */
-
 app.post('/book', function(req, res){
-    const attendee_name = req.body.name;
-    const attendee_email = req.body.email;
-    const course_id = req.body.course_id;
+  const attendee_name = req.body.name;
+  const attendee_email = req.body.email;
+  const course_id = req.body.course_id;
 
-    if(course_id && attendee_email && attendee_name){
-        db.bookCourse(attendee_name, attendee_email, course_id, function(message){
-            res.send(message);
-        });
-    }
+  if(course_id && attendee_email && attendee_name){
+    db.bookCourse(attendee_name, attendee_email, course_id, function(message){
+      res.send(message);
+    });
+  }
 });
 
 app.get('/getCourses', function(req, res) {
-    db.getCourses(function(rows) {
+  db.getCourses(function(rows) {
     res.send(rows);
   });
 });
-
 
 app.listen(8002, function() {
     console.log('Express server listening on port 8002');
