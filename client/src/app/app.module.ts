@@ -2,15 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SeeAllCoursesComponent } from './see-all-courses/see-all-courses.component';
-import { DataServiceService } from './data-service.service';
-import { AlertModule } from "ngx-bootstrap";
-import { HttpClientModule } from '@angular/common/http';
+import {AlertModule} from "ngx-bootstrap";
+import {SeeAllCoursesComponent} from "./see-all-courses/see-all-courses.component";
+import {BookCourseComponent} from "./book-course/book-course.component";
+import {HttpClientModule} from "@angular/common/http";
+import {DataServiceService} from "./data-service.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SeeAllCoursesComponent
+    SeeAllCoursesComponent,
+    BookCourseComponent
   ],
   imports: [
     BrowserModule,
