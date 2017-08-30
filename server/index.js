@@ -30,15 +30,15 @@ app.use(errorHandler());
  */
 
 app.post('/book', function(req, res){
-    const attendee_name = req.body.name;
-    const attendee_email = req.body.email;
-    const course_id = req.body.course_id;
+  const attendee_name = req.body.name;
+  const attendee_email = req.body.email;
+  const course_id = req.body.course_id;
 
-    if(course_id && attendee_email && attendee_name){
-        db.bookCourse(attendee_name, attendee_email, course_id, function(message){
-            res.send(message);
-        });
-    }
+  if(course_id && attendee_email && attendee_name){
+    db.bookCourse(attendee_name, attendee_email, course_id, function(message){
+      res.send(message);
+    });
+  }
 });
 
 app.get('/getCourses', function(req, res) {
