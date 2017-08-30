@@ -22,6 +22,17 @@ exports.getCourses = function (callback){
   );
 };
 
+exports.getCourseByID = function(course_id, callback){
+  db.query(
+    "SELECT * FROM courses WHERE course_id = ?",
+    [course_id],
+    function(err, rows) {
+      if(err) throw err;
+      callback(rows);
+    }
+  );
+};
+
 exports.bookCourse = function (attendee_name, attendee_email, course_id, callback){
   db.query(
     "INSERT INTO `attendees` (`attendee_name`, `attendee_email`, `course_id`) "

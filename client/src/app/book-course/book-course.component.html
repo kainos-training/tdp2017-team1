@@ -2,13 +2,18 @@
 
 <div class="container" *ngIf="display">
     <div class="row">
-        <div class="col-md-3 col-md-offset-4 bookingPrompt">
+        <div class="col-md-3 col-md-offset-4 col-sm-3 col-sm-offset-4  bookingPrompt">
             <div class="row header">
-                <div class="col-md-10">
-                    <h4>Book a course</h4>
+                <div class="col-md-10 col-sm-9 col-xs-9">
+                    <h5>Book a cheese</h5>
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-1">
                     <button class="btn closeBtn" (click)="closeModal()">X</button>
+=======
+                <div class="col-md-1 col-sm-1 col-sm-1">
+                    <button class="btn closeBtn" (click)="closeModal()">x</button>
+>>>>>>> 468811ab32a64098a010ce319583173d155bb28b
                 </div>
             </div>
             <div class="row">
@@ -19,6 +24,7 @@
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" placeholder="Name">
                     </div>
+<<<<<<< HEAD
 
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -27,6 +33,9 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary" (click)="bookCourse(course.course_id)">Book Now</button>
+=======
+                    <button type="submit" class="btn btn-kainos" (click)="bookCourse(course.course_id)">Submit</button>
+>>>>>>> 468811ab32a64098a010ce319583173d155bb28b
                 </form>
                 <br>
             </div>
