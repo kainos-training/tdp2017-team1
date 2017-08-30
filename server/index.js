@@ -42,7 +42,6 @@ app.post('/book', function(req, res){
 
 app.get('/getCourses', function(req, res) {
   db.getCourses(function(rows) {
-    console.log(rows);
     res.send(rows);
   });
 });
