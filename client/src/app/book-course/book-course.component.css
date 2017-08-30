@@ -1,8 +1,6 @@
 .bookingPrompt{
     background-color: whitesmoke;
-    position: absolute;
-    border-radius: 10px;
-    z-index: 3;
+    box-shadow: 10px 10px 15px #888888;
 }
 
 .closeBtn{
@@ -22,6 +20,6 @@
 
 .container{
     position: absolute;
-    top: 150px;
-    left: 150px;
+    top: 28%;
+    left: 7%;
 }
