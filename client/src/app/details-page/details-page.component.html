@@ -1,7 +1,7 @@
-<a class="btn btn-kainos" href="/index">Go back to Courses</a>
+<a class="btn btn-kainos" href="/index" style="padding-bottom: 3%;">< Go back to Courses</a>
 <!--<div *ngif="course">-->
 <div class="detailsContainer">
-    <p class="details"><img src="assets/location.png" style="height: 14pt">{{course.location}} <span style="padding-left: 25px"><img src="assets/calendar.png" style="height: 14pt">{{course.date}}</span></p>
+    <p class="details"><img src="assets/location.png" style="height: 14pt"><span style="padding-left: 20px; padding-right:30px">{{course.location}}</span> <img src="assets/calendar.png" style="height: 14pt"><span style="padding-left: 20px; padding-right: 20px">{{course.start_date | date:'dd MMMM yyyy'}}</span></p>
 
     <h2>{{course.title}}</h2>
     <br>
@@ -15,7 +15,7 @@
     <p>{{course.description}}</p>
     <br/>
     <div class="book-button">
-        <map-book-course></map-book-course>
+        <map-book-course [course]="course"></map-book-course>
     </div>
 </div>
 <!--</div>-->
