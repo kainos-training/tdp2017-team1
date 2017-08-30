@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataServiceService} from "../data-service.service";
 import {Course} from "../course";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
@@ -11,7 +11,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class BookCourseComponent implements OnInit {
 
   data: DataServiceService;
-  course: Course;
+  @Input() course : Course;
 
   constructor(data: DataServiceService, private http: HttpClient) {
     this.data = data;
@@ -20,13 +20,11 @@ export class BookCourseComponent implements OnInit {
   ngOnInit() {
   }
 
-  bookCourse(){
+  bookCourse(course_id){
     var name = prompt("Please enter your name here:");
     var email = prompt("Please enter your email here:");
 
-    var course_id = 1;
-
-    if(name && email){
+    if(name && email && course_id){
         this.sendBookingRequest(name, email, course_id);
     }
   }
