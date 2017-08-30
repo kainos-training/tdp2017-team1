@@ -8,21 +8,25 @@
                     <h4>Book a course</h4>
                 </div>
                 <div class="col-md-1">
-                    <button class="btn closeBtn" (click)="closeModal()">x</button>
+                    <button class="btn closeBtn" (click)="closeModal()">X</button>
                 </div>
             </div>
             <div class="row">
                 <form class="bookingForm">
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" [(ngModel)]="user.email" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
+                    <img src="assets/modalImage.png">  
+                                          
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" placeholder="Name">
                     </div>
-                    <button type="submit" class="btn btn-primary" (click)="bookCourse(course.course_id)">Submit</button>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" [(ngModel)]="user.email" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" (click)="bookCourse(course.course_id)">Book Now</button>
                 </form>
                 <br>
             </div>
