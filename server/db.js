@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const config = require('./config.json');
+const calendarNotifier = require('./calendarNotifier.js');
 
 const db = mysql.createConnection({
     host: config.host,
