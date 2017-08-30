@@ -12,21 +12,23 @@ export class BookCourseComponent implements OnInit {
 
   data: DataServiceService;
   @Input() course : Course;
+  display: boolean;
 
   constructor(data: DataServiceService, private http: HttpClient) {
     this.data = data;
+    this.display = false;
   }
 
   ngOnInit() {
   }
 
   bookCourse(course_id){
-    var name = prompt("Please enter your name here:");
-    var email = prompt("Please enter your email here:");
+    this.display = true;
+    console.log("TRYING TO SUBMIT WITH:" , course_id);
 
-    if(name && email && course_id){
-        this.sendBookingRequest(name, email, course_id);
-    }
+    // if(name && email && course_id){
+    //     this.sendBookingRequest(name, email, course_id);
+    // }
   }
 
     public sendBookingRequest(name, email, course_id){
