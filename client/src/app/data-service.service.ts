@@ -33,4 +33,9 @@ export class DataServiceService {
         }
     ];
 
+    public getCourseByID(course_id){
+        let url = "/api/getCourseByID/" + course_id;
+        return this.http.get<Course>(url);
+    }
+
 }

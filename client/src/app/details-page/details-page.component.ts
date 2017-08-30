@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Course} from "../course";
+import {DataServiceService} from "../data-service.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'map-details-page',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPageComponent implements OnInit {
 
-  constructor() { }
+  course : Observable<Course>;
+
+  constructor(private route: ActivatedRoute, private dataService: DataServiceService) { }
 
   ngOnInit() {
+      let course_id = this.route.snapshot.queryParams["course_id"];
+      this.dataService.getCourseByID(course_id).subscribe(data => {
+          this.course = data[0];
+      });
   }
 
 }
