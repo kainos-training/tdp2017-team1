@@ -1,17 +1,21 @@
 <a class="btn btn-kainos" href="/index">Go back to Courses</a>
+<!--<div *ngif="course">-->
+<div class="detailsContainer">
+    <p class="details"><img src="assets/location.png" style="height: 14pt">{{course.location}} <span style="padding-left: 25px"><img src="assets/calendar.png" style="height: 14pt">{{course.date}}</span></p>
 
-<img><p class="details">{{course.location}}</p><img><p>{{course.date}}</p>
-
-<h2>{{course.title}}</h2>
-<br>
-<h3><strong>Trainers</strong></h3>
-<p>{{course.trainer_name}}</p>
-<br/>
-<h3><strong>Who attends?</strong></h3>
-<p>{{course.who_attends}}</p>
-<br/>
-<h3><strong>Description</strong></h3>
-<p>{{course.description}}</p>
-<br/>
-<map-book-course></map-book-course>
-
+    <h2>{{course.title}}</h2>
+    <br>
+    <h3><strong>Trainers</strong></h3>
+    <p>{{course.trainer_name}}</p>
+    <br/>
+    <h3><strong>Who attends?</strong></h3>
+    <p>{{course.who_attends}}</p>
+    <br/>
+    <h3><strong>Description</strong></h3>
+    <p>{{course.description}}</p>
+    <br/>
+    <div class="book-button">
+        <map-book-course></map-book-course>
+    </div>
+</div>
+<!--</div>-->
