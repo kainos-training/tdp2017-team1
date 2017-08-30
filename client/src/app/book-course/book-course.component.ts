@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {DataServiceService} from "../data-service.service";
 import {Course} from "../course";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {User} from "../user";
 
 @Component({
   selector: 'map-book-course',
@@ -12,20 +13,31 @@ export class BookCourseComponent implements OnInit {
 
   data: DataServiceService;
   @Input() course : Course;
+  display: boolean;
+  user: User;
+
 
   constructor(data: DataServiceService, private http: HttpClient) {
     this.data = data;
+    this.closeModal();
+    this.user = new User();
   }
 
   ngOnInit() {
   }
 
-  bookCourse(course_id){
-    var name = prompt("Please enter your name here:");
-    var email = prompt("Please enter your email here:");
+  showModal(){
+      this.display = true;
+  }
 
-    if(name && email && course_id){
-        this.sendBookingRequest(name, email, course_id);
+  closeModal(){
+      this.display = false;
+  }
+
+  bookCourse(course_id){
+    if(this.user.name && this.user.email && course_id){
+        this.sendBookingRequest(this.user.name, this.user.email, course_id);
+        this.closeModal();
     }
   }
 

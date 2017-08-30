@@ -1,0 +1,12 @@
+.bookingPrompt{
+    border-radius: 10px;
+    background-color: white;
+}
+.promptForm{
+    background-color: white;
+    padding-bottom: 10%;
+}
+
+.close-btn{
+    background: transparent;
+}

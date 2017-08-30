@@ -1,3 +1,22 @@
-.btn {
-    width: 100px;
+.bookingPrompt{
+    background-color: whitesmoke;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 3;
 }
+
+.closeBtn{
+    background: transparent;
+}
+
+.bookingForm{
+    margin: 2%;
+}
+
+.header{
+    background-color: lightgray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
