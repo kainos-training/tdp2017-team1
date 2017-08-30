@@ -7,12 +7,14 @@ import {SeeAllCoursesComponent} from "./see-all-courses/see-all-courses.componen
 import {BookCourseComponent} from "./book-course/book-course.component";
 import {HttpClientModule} from "@angular/common/http";
 import {DataServiceService} from "./data-service.service";
+import { BookModalComponent } from './book-modal/book-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeeAllCoursesComponent,
-    BookCourseComponent
+    BookCourseComponent,
+    BookModalComponent
   ],
   imports: [
     BrowserModule,
