@@ -2,6 +2,6 @@
     "email": "kainostdpteam1@gmail.com",
     "password": "tdppassword",
     "host": "smtp.gmail.com",
-    "port": 465,
-    "secure": true
+    "port": 587,
+    "secure": false
 }
