@@ -1,8 +1,18 @@
-<div>
-    <h2>Available courses:</h2>
-
-    <ul class="courseList">
-
-        <li *ngFor="let course of db.courses|async">{{course.title}}</li>
-    </ul>
-</div>
+<table class="table">
+    <thead>
+    <tr>
+      <th>Course Title</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Book</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of db.courses|async">
+      <th scope="row">{{course.title}}</th>
+      <td>{{course.location}}</td>
+      <td>{{course.start_date | date:'dd MMMM yyyy'}}</td>
+        <td><map-book-course [course]="course"></map-book-course></td>
+    </tr>
+    </tbody>
+  </table>

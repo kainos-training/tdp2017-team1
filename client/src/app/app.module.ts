@@ -7,6 +7,7 @@ import {SeeAllCoursesComponent} from "./see-all-courses/see-all-courses.componen
 import {BookCourseComponent} from "./book-course/book-course.component";
 import {HttpClientModule} from "@angular/common/http";
 import {DataServiceService} from "./data-service.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {DataServiceService} from "./data-service.service";
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]
