@@ -1,8 +1,8 @@
 // Lets put tests here!
 const db = require('../db.js');
 const _ = require('lodash');
-
 var assert = require('assert');
+
 describe('dbTest.js', function() {
   describe('getCourses Function', function() {
     it('Should return rows object when called', function() {
@@ -23,6 +23,15 @@ describe('dbTest.js', function() {
       const attendee_name = "richard";
       const attendee_email = "richard@hotmail.com";
       const course_id = "1";
+
+      db.bookCourse(attendee_name, attendee_email, course_id, function(message){
+        assert.equal(message, "Course booked.");
+      });
+    });
+    it('Should return error when invalid courseId passed', function() {
+      const attendee_name = "richard";
+      const attendee_email = "richard@hotmail.com";
+      const course_id = "100";
 
       db.bookCourse(attendee_name, attendee_email, course_id, function(message){
         assert.ok(true);

@@ -8,7 +8,8 @@
 }
 
 .bookingForm{
-    margin: 2%;
+    margin: 15%;
+    margin-top:5%;
 }
 
 .header{
@@ -22,4 +23,42 @@
     position: absolute;
     top: 28%;
     left: 7%;
+}
+
+.row.header {
+    background-color: #FAFAFA;
+    padding:10px;
+}
+
+.bookingPrompt {
+    width:600px;
+}
+
+label {
+    font-size:25px;
+    color:#6E6E6E;
+}
+
+button[type=submit] {
+    width:80%;
+    margin-left:40px;
+    padding:15px;
+}
+
+h4 {
+    font-size:26px;
+    color:#6E6E6E;
+}
+
+img {
+    margin-left:130px;
+
+}
+
+.form-group{
+    margin-bottom:10%;
+}
+
+.form-control {
+    height:45px;
 }

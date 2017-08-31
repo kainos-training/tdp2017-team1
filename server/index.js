@@ -40,6 +40,16 @@ app.post('/book', function(req, res){
   }
 });
 
+app.get('/getCourseByID/:course_id', function(req, res) {
+    const course_id = req.params.course_id;
+
+    if(course_id) {
+        db.getCourseByID(course_id, function(rows) {
+            res.send(rows)
+        });
+    }  
+})
+
 app.get('/getCourses', function(req, res) {
   db.getCourses(function(rows) {
     res.send(rows);

@@ -22,5 +22,5 @@ Node, npm, git
 
 - cd server
 - npm install
-- nodemon index.js
+- npm start
 ```
